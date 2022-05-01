@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { StyleSheet, View, Dimensions } from 'react-native';
+import { Button} from 'react-native-paper';
 
 export default function Navbar() {
+
   return (
-    <View style={styles.navbar}>
+    <View style={styles.navbar}> 
         <Button 
             icon="home"
             style={ styles.buttonIconStyle }
@@ -40,13 +41,19 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         zIndex: 2,
+        textAlign: 'center',
+        padding: 0,
     },
     iconStyle: {
-        fontSize: 35,
-        color: 'dodgerblue', 
+        fontSize: 40,
+        color: 'dodgerblue',
+        flex: 1,
+        paddingLeft: 10,
+        marginHorizontal: -10,
     },
     buttonIconStyle: {
-        padding: 0,
-        textAlign: 'center'
+        textAlign: 'center',
+        alignContent: 'center',
+        height: 40,
     }
 })
