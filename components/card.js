@@ -4,7 +4,7 @@ import { View, StyleSheet, Text } from 'react-native'
 export default function card() {
   return (
     <View style={styles.card}>
-        <Text>THIS IS FOR TESTING</Text>
+        <Text onPress={() => alert("testing")} onLongPress={() => alert("testing long press")} >THIS IS FOR TESTING</Text>
     </View>
   )
 }
@@ -12,9 +12,10 @@ export default function card() {
 const styles = StyleSheet.create({
     card: {
         backgroundColor: 'dodgerblue',
-        width: '70%',
-        height: '70%',
+        width: "100%",
+        height: 700,
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: 20,
     }
 })
